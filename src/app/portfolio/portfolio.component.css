@@ -1,0 +1,86 @@
+.portfolio__area .image img {
+  aspect-ratio: 6/4;
+  visibility: hidden;
+}
+.portfolio__area .image {
+  background-size: 100% 200%;
+  animation: animation-photo 15s linear infinite alternate;
+  filter: grayscale(1);
+  transition: var(--transition);
+  cursor: pointer;
+  border-radius: 5px;
+}
+.portfolio__area .image:hover {
+  filter: grayscale(0);
+}
+@keyframes animation-photo {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 100%;
+  }
+}
+.portfolio__area .image .layer__icon {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  background-color: rgb(0 0 0 / 0.5);
+  opacity: 0;
+  transition: var(--transition);
+}
+.portfolio__area .image:hover .layer__icon {
+  opacity: 1;
+}
+.portfolio__area .light__box {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0 0 0 / 0.5);
+}
+.portfolio__area .light__box .layer__box {
+  width: 80%;
+  height: 90%;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: auto;
+  color: var(--text-model);
+  padding: 2rem 1rem;
+}
+.portfolio__area .light__box .layer__box .content {
+  width: 80%;
+  margin: 0 auto;
+}
+.portfolio__area .light__box .layer__box .title {
+  width: fit-content;
+  margin: 0 auto;
+}
+.portfolio__area .light__box .layer__box .icon {
+  position: relative;
+}
+.portfolio__area .light__box .layer__box .icon::before,
+.portfolio__area .light__box .layer__box .icon::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 45%;
+  background-color: var(--text-model);
+}
+.portfolio__area .light__box .layer__box .icon::before {
+  left: 0;
+}
+.portfolio__area .light__box .layer__box .icon::after {
+  right: 0;
+}
+.portfolio__area .light__box .layer__box img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background-color: #efefef;
+  border: 1px solid var(--main-color);
+  padding: 10px;
+}

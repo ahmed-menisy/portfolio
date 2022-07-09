@@ -1,0 +1,28 @@
+.name {
+  font-family: "clicker script";
+  color: var(--main-color);
+}
+.home__container .port__image {
+   width: fit-content;
+   position: relative;
+}
+.home__container .port__image::before {
+   top: -10px;
+   left: -10px;
+   border-top: 4px solid var(--main-color);
+   border-left: 4px solid var(--main-color);
+}
+.home__container .port__image::after {
+   bottom: -10px;
+   right: -10px;
+   border-bottom: 4px solid var(--main-color);
+   border-right: 4px solid var(--main-color);
+}
+.home__container .port__image::after,
+.home__container .port__image::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+

@@ -1,0 +1,13 @@
+.services .services__area .card  i {
+   margin: 0 auto;
+   width: 90px;
+   height: 90px;
+   border-radius: 50%;
+   display: grid;
+   place-content: center;
+   transition: var(--transition);
+}
+.services .services__area .card:hover i {
+   background-color: var(--main-color);
+   color: #fff;
+}

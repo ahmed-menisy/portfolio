@@ -1,0 +1,106 @@
+/* ------------ Aside 1 ------------ */
+aside.aside__1 {
+  background-color: var(--aside-color);
+  border-right: 1px solid var(--bg-black-50);
+  width: 240px;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+aside.aside__1 .logo {
+  padding: 0.1rem 1rem;
+  top: 40px;
+  position: absolute;
+}
+aside.aside__1 .logo::after,
+aside .logo::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+}
+aside.aside__1 .logo::after {
+  top: 0;
+  right: 0;
+  border-top: 4px solid var(--main-color);
+  border-right: 4px solid var(--main-color);
+}
+aside.aside__1 .logo::before {
+  bottom: 0;
+  left: 0;
+  border-bottom: 4px solid var(--main-color);
+  border-left: 4px solid var(--main-color);
+}
+aside.aside__1 h4 span {
+  font-family: "Clicker Script", cursive;
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+aside.aside__1 .nav__menu li {
+  margin-bottom: 0.5rem;
+  padding: 0.4rem 0 0 1rem;
+  border-bottom: 1px solid var(--bg-black-50);
+}
+aside.aside__1 .nav__menu li a {
+  letter-spacing: 1.5px;
+  font-weight: 400 !important;
+}
+aside.aside__1 .nav__menu li i {
+  width: 35px;
+}
+
+aside.aside__1 .nav__menu a.active {
+  color: var(--main-color);
+}
+@media (max-width: 767.98px) {
+  aside.aside__1 {
+    display: none;
+  }
+  nav {
+    display: flex !important;
+  }
+}
+/* ------------ Aside 2 ------------ */
+nav {
+  background-color: #4b454b;
+  position: fixed;
+  bottom: 10px;
+  z-index: 9999;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  display: none;
+}
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+nav ul li a {
+  color: var(--main-color);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  transition: top .35s cubic-bezier(.57,.21,.69,1.25) , background-color .1s .25s;
+}
+nav ul li a.active {
+  top: -25px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #201f20;
+}

@@ -1,0 +1,30 @@
+.about__area .about__info .list-group li {
+   border-bottom-color: var(--bg-black-50);
+}
+.about__area .about__info .item .progress {
+   height: 10px;
+}
+.about__area .education__menu {
+   position: relative;
+}
+.about__area .education__menu::before {
+content: '';
+position: absolute;
+left: 0;
+width: 1px;
+height: 100%;
+background-color: var(--main-color);
+}
+.about__area .education__menu li {
+   margin-bottom: 3rem;
+   position: relative;
+}
+.about__area .education__menu li::before {
+   content: '';
+   position: absolute;
+   width: 15px;
+   height: 15px;
+   background-color: var(--main-color);
+   border-radius: 50%;
+   left: calc(-32px - 7.5px);
+}

@@ -1,0 +1,63 @@
+<section class="portfolio h-100 overflow-auto pb-5 container-fluid">
+  <div class="main__title my-5">
+    <h3>portfolio</h3>
+  </div>
+  <div class="sub__title">
+    <h6>my last projects:</h6>
+  </div>
+  <!-- ------------- Start Portfolio Area ------------- -->
+  <div class="portfolio__area">
+    <div class="row gy-4">
+      <div *ngFor="let item of imgList" class="col-md-6 col-lg-4">
+        <div
+          (click)="showData(item)"
+          class="image overflow-hidden position-relative"
+          [style.backgroundImage]="'url(' + item.url + ')'"
+        >
+          <div class="layer__icon">
+            <i class="fa-solid fa-plus fa-6x main-color"></i>
+          </div>
+          <img
+            src="../../assets/images/pro-1.png"
+            alt="portofolio photo"
+            class="w-100"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Modal Box To show Data -->
+    <div class="light__box text-center" *ngIf="show">
+      <div class="layer__box">
+        <!-- icon close box-->
+        <button (click)="closeData()" class="btn float-end">
+          <i class="fa-solid fa-xmark fa-3x main-color"></i>
+        </button>
+        <div class="clearfix"></div>
+        <div class="content">
+          <div class="title">
+            <h3 class="text-uppercase">{{ titleImg }}</h3>
+            <div class="icon">
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <img [src]="urlImg" alt="portfolio photo" class="rounded-3 my-4" />
+          <a [href]="demo" class="btn btn-dark btn-sm mb-2" target="_blank"
+            >Demo</a
+          >
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat
+            magni ut deleniti, soluta mollitia cum nemo quod voluptate similique
+            illum esse cupiditate laboriosam animi quasi. Perspiciatis adipisci
+            eum modi.
+          </p>
+          <button
+            (click)="closeData()"
+            class="btn btn-warning btn-main rounded-pill"
+          >
+            <i class="fa-solid fa-xmark"></i> Close Window
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
